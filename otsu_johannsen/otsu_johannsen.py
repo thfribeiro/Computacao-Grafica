@@ -74,7 +74,6 @@ def otsu():
 image = cv2.imread("macaco.jpg", 0)
 th1 = otsu()
 th2 = johansen()
-print(th1, th2)
 res, gray = cv2.threshold(image, th1, 255, cv2.THRESH_BINARY)
 res2, gray2 = cv2.threshold(image, th2, 255, cv2.THRESH_BINARY)
 cv2.imshow("Gray - OTSU", gray)
