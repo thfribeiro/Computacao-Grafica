@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 import math
 
+#HSI e YCBCR
+
 img = cv2.imread('Tatu.jpg')
 img2 = np.float32(cv2.imread("tatu.jpg"))/255
 h, w = img.shape[:2]  # Slicing
