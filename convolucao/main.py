@@ -17,7 +17,7 @@ def filterImage1(image):
             #print(int(image[i][j] * kernel[1][1]) / 17)
             filtro[i][j] = (image[i-1][j-1] * kernel[0][0] + image[i-1][j] * kernel[0][1] + image[i-1][j+1] * kernel[0][2] +\
                               image[i][j-1] * kernel[1][0] + image[i][j] * kernel[1][1] + image[i][j+1] * kernel[1][2] +\
-                              image[i+1][j-1] * kernel[2][0] + image[i+1][j] * kernel[2][1] + image[i+1][j+1] * kernel[2][2]) / 17
+                              image[i+1][j-1] * kernel[2][0] + image[i+1][j] * kernel[2][1] + image[i+1][j+1] * kernel[2][2]) / 5
             #print(filtro[i][j][0])
 
     return filtro.astype("uint8")
@@ -32,7 +32,7 @@ def filterImage2(image):
             #print(int(image[i][j] * kernel[1][1]) / 17)
             filtro[i][j] = (image[i-1][j-1] * kernel[0][0] + image[i-1][j] * kernel[0][1] + image[i-1][j+1] * kernel[0][2] +\
                               image[i][j-1] * kernel[1][0] + image[i][j] * kernel[1][1] + image[i][j+1] * kernel[1][2] +\
-                              image[i+1][j-1] * kernel[2][0] + image[i+1][j] * kernel[2][1] + image[i+1][j+1] * kernel[2][2]) / 17
+                              image[i+1][j-1] * kernel[2][0] + image[i+1][j] * kernel[2][1] + image[i+1][j+1] * kernel[2][2]) / 9
             #print(filtro[i][j][0])
 
     return filtro.astype("uint8")
@@ -48,7 +48,7 @@ def filterImage3(image):
             #print(int(image[i][j] * kernel[1][1]) / 17)
             filtro[i][j] = (image[i-1][j-1] * kernel[0][0] + image[i-1][j] * kernel[0][1] + image[i-1][j+1] * kernel[0][2] +\
                               image[i][j-1] * kernel[1][0] + image[i][j] * kernel[1][1] + image[i][j+1] * kernel[1][2] +\
-                              image[i+1][j-1] * kernel[2][0] + image[i+1][j] * kernel[2][1] + image[i+1][j+1] * kernel[2][2]) / 17
+                              image[i+1][j-1] * kernel[2][0] + image[i+1][j] * kernel[2][1] + image[i+1][j+1] * kernel[2][2]) / 10
             #print(filtro[i][j][0])
 
     return filtro.astype("uint8")
@@ -69,7 +69,7 @@ def filterImage4(image):
             #print(int(image[i][j] * kernel[1][1]) / 17)
             filtro[i][j] = (image[i-1][j-1] * kernel[0][0] + image[i-1][j] * kernel[0][1] + image[i-1][j+1] * kernel[0][2] +\
                               image[i][j-1] * kernel[1][0] + image[i][j] * kernel[1][1] + image[i][j+1] * kernel[1][2] +\
-                              image[i+1][j-1] * kernel[2][0] + image[i+1][j] * kernel[2][1] + image[i+1][j+1] * kernel[2][2]) / 17
+                              image[i+1][j-1] * kernel[2][0] + image[i+1][j] * kernel[2][1] + image[i+1][j+1] * kernel[2][2]) / 12
             #print(filtro[i][j][0])
 
     return filtro.astype("uint8")
