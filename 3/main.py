@@ -49,12 +49,14 @@ def my_dilatation(img, kernel):
 
 
 def my_opening(img, kernel):
-    opening = my_dilatation(img, kernel)
+    erode = my_erode(img, kernel)
+    opening = my_dilatation(erode, kernel)
     return opening.astype("uint8")
 
 
 def my_closing(img, kernel):
-    closing = my_erode(img, kernel)
+    dilatation = my_dilatation(img, kernel)
+    closing = my_erode(dilatation, kernel)
     return closing.astype("uint8")
 
 
@@ -77,10 +79,10 @@ cv2.imshow("Erode", erode)
 dilatation = my_dilatation(image, structuring_element)
 cv2.imshow("Dilatation", dilatation)
 
-opening = my_opening(erode, structuring_element)
+opening = my_opening(image, structuring_element)
 cv2.imshow("Opening", opening)
 
-closing = my_closing(dilatation, structuring_element)
+closing = my_closing(image, structuring_element)
 cv2.imshow("Closing", closing)
 
 cv2.waitKey(0)
